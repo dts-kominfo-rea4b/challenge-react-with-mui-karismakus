@@ -42,8 +42,9 @@ const App = () => {
                                       <Avatar src={contact.photo}/>
                                   </ListItemAvatar>
                                   <List>
-                                      <ListItemText primary={contact.name} secondary={contact.phone}/>
-                                      <ListItemText secondary={contact.email}/>
+                                      <ListItem>{contact.name}</ListItem>
+                                      <ListItem>{contact.phone}</ListItem>
+                                      <ListItem>{contact.email}</ListItem>
                                   </List>
                               </ListItem>
                             );
