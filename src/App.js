@@ -1,5 +1,5 @@
 import './App.css';
-import { Avatar, Button, Card, List, ListItem, ListItemAvatar, TextField } from '@mui/material';
+import { Avatar, Button, Card, List, ListItem, ListItemAvatar, ListItemText, TextField } from '@mui/material';
 import { Box, Grid } from '@mui/material';
 import ContactForm from './components/ContactForm';
 import Header from './components/Header';
@@ -39,12 +39,11 @@ const App = () => {
                             return (
                               <ListItem>
                                   <ListItemAvatar>
-                                      <Avatar sx={{ height:"75px", width:"75px" }} src={contact.photo}/>
+                                      <Avatar src={contact.photo}/>
                                   </ListItemAvatar>
                                   <List>
-                                      <ListItem>{contact.name}</ListItem>
-                                      <ListItem>{contact.phone}</ListItem>
-                                      <ListItem>{contact.email}</ListItem>
+                                      <ListItemText primary={contact.name} secondary={contact.phone}/>
+                                      <ListItemText secondary={contact.email}/>
                                   </List>
                               </ListItem>
                             );
