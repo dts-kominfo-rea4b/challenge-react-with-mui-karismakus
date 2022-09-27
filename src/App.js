@@ -7,6 +7,7 @@ import Header from './components/Header';
 // Uncomment untuk memuat daftar kontak
 import contactsJSON from './data/contacts.json';
 import { useState } from 'react';
+import Contact from './components/Contact';
 
 const App = () => {
   // Masukkan Header dan lakukan map untuk Contact ke dalam div App
@@ -33,24 +34,7 @@ const App = () => {
                 </Grid>
 
                 <Grid item lg={6} md={6}>
-                    <Card>
-                        <List sx={{ width: 1 }}>
-                          {contacts.map((contact) => {
-                            return (
-                              <ListItem>
-                                  <ListItemAvatar>
-                                      <Avatar src={contact.photo}/>
-                                  </ListItemAvatar>
-                                  <List>
-                                      <ListItem>{contact.name}</ListItem>
-                                      <ListItem>{contact.phone}</ListItem>
-                                      <ListItem>{contact.email}</ListItem>
-                                  </List>
-                              </ListItem>
-                            );
-                          })} 
-                        </List>
-                    </Card> 
+                    <Contact data={contacts}/>
                 </Grid>
             </Grid>
 
