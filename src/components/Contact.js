@@ -8,25 +8,18 @@ import React from 'react';
 // atau langsung tambahkan dengan sx={{}}
 const Contact = ({ data }) => {
     // Contact berisi foto, nama, telepon, dan email
-    return (<div>
-        <Card>
-            <List sx={{ width: 1 }}>
-                {data.map((contact, index) => {
-                return (
-                    <ListItem key={index}>
-                        <ListItemAvatar>
-                            <Avatar src={contact.photo}/>
-                        </ListItemAvatar>
-                        <List>
-                            <ListItemText primary={contact.name}/>
-                            <ListItemText primary={contact.phone}/>
-                            <ListItemText primary={contact.email}/>
-                        </List>
-                    </ListItem>
-                );
-                })} 
+    return (
+    <div>
+        <ListItem>
+            <ListItemAvatar>
+                <Avatar src={data.photo}/>
+            </ListItemAvatar>
+            <List>
+                <ListItemText primary={data.name}/>
+                <ListItemText primary={data.phone}/>
+                <ListItemText primary={data.email}/>
             </List>
-        </Card> 
+        </ListItem>
     </div>);
 };
 

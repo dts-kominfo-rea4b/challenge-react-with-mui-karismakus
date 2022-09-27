@@ -34,7 +34,15 @@ const App = () => {
                 </Grid>
 
                 <Grid item lg={6} md={6}>
-                    <Contact data={contacts}/>
+                  <Card>
+                    <List>
+                      {contacts.map((contact) => {
+                        return(
+                          <Contact data={contact}/>
+                        )
+                      })};
+                    </List>
+                  </Card>
                 </Grid>
             </Grid>
 
